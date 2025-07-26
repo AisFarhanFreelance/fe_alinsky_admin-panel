@@ -21,7 +21,6 @@ const eslintConfig = [
       "no-alert": "error",
       "consistent-return": "error",
       "no-nested-ternary": "off",
-      "unicorn/check-strict-equality": "off",
       "unicorn/filename-case": [
         "error",
         {
