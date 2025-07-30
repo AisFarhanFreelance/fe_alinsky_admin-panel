@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utilities";
+import { cn } from "@/lib/utils";
 import {
   BarChart3,
   HelpCircle,
