@@ -7,6 +7,7 @@ import {
   LayoutDashboard,
   LogOut,
   Menu,
+  Newspaper,
   Settings,
   Users,
   Wallet,
@@ -150,6 +151,7 @@ const navItems = [
   { name: "Users", href: "/users", icon: Users, badge: "8" },
   { name: "Transactions", href: "/transactions", icon: Wallet },
   { name: "Analytics", href: "/analytics", icon: BarChart3 },
+  { name: "Blogs", href: "/blogs", icon: Newspaper },
 ];
 
 const footerItems = [
