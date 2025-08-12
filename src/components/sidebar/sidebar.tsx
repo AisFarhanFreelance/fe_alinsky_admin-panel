@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import {
   BarChart3,
+  BookUser,
   HelpCircle,
   LayoutDashboard,
   LogOut,
@@ -151,6 +152,7 @@ const navItems = [
   { name: "Users", href: "/users", icon: Users, badge: "8" },
   { name: "Transactions", href: "/transactions", icon: Wallet },
   { name: "Analytics", href: "/analytics", icon: BarChart3 },
+  { name: "Lead Capture", href: "/lead-capture", icon: BookUser },
   { name: "Blogs", href: "/blogs", icon: Newspaper },
 ];
 
