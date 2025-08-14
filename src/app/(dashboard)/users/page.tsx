@@ -25,7 +25,7 @@ const Users = () => {
 
 export default Users;
 
-export const users = [
+const users = [
   {
     id: "3e1d4553-b801-40c1-a97b-52a4e649a324",
     email: "aldo.pratama@example.com",
