@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import {
   BarChart3,
   BookUser,
+  FileQuestion,
   HelpCircle,
   LayoutDashboard,
   LogOut,
@@ -154,6 +155,7 @@ const navItems = [
   { name: "Analytics", href: "/analytics", icon: BarChart3 },
   { name: "Lead Capture", href: "/lead-capture", icon: BookUser },
   { name: "Blogs", href: "/blogs", icon: Newspaper },
+  { name: "Tutorial", href: "/tutorial", icon: FileQuestion },
 ];
 
 const footerItems = [
