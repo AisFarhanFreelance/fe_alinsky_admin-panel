@@ -1,5 +1,6 @@
 "use client";
 
+import { login } from "@/actions/auth-actions";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -54,7 +55,7 @@ export function LoginForm() {
           </div>
         </CardContent>
         <CardFooter className="mt-4">
-          <Button className="w-full" type="submit">
+          <Button className="w-full" formAction={login}>
             {"Log in"}
           </Button>
         </CardFooter>

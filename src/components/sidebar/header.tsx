@@ -1,5 +1,6 @@
 "use client";
 
+import { logout } from "@/actions/auth-actions";
 import { Bell, Menu, Search, User } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -66,7 +67,13 @@ export function Header() {
             <DropdownMenuItem>Profile</DropdownMenuItem>
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => {
+                logout();
+              }}
+            >
+              Logout
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
