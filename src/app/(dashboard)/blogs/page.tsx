@@ -1,4 +1,5 @@
 import { FilePlus2, SquarePen } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,10 +17,12 @@ const Users = () => {
           </h1>
           <p className="text-muted-foreground">Manage Blog Posts</p>
         </div>
-        <Button>
-          <FilePlus2 className="mr-2 h-4 w-4" />
-          Add Blog
-        </Button>
+        <Link href="/blogs/add">
+          <Button>
+            <FilePlus2 className="mr-2 h-4 w-4" />
+            Add Blog
+          </Button>
+        </Link>
       </div>
 
       <div>
