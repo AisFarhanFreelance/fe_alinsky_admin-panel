@@ -12,16 +12,36 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const supabase = await createClient();
-  const { error } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (error) {
+  if (!user) {
     redirect("/login");
   }
+
+  let role = "user";
+  let permissions = [];
+
+  const { data: userTable } = await supabase
+    .from("users")
+    .select("role")
+    .eq("id", user.id)
+    .single();
+
+  role = userTable?.role || "user";
+
+  const { data: permissionTable } = await supabase
+    .from("user_permissions")
+    .select("permission")
+    .eq("user_id", user.id);
+
+  permissions = permissionTable?.map((item) => item.permission) || [];
 
   return (
     <SidebarProvider>
       <div className="min-h-screen bg-background">
-        <Sidebar />
+        <Sidebar role={role} permissions={permissions} />
         <div className="lg:pl-72">
           <Header />
           <main className="p-4 md:p-6 lg:p-8">{children}</main>
