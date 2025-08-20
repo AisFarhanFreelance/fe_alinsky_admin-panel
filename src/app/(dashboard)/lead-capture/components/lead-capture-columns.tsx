@@ -1,10 +1,6 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import Link from "next/link";
-import { ReactNode } from "react";
-
-import { Button } from "@/components/ui/button";
 
 export type LeadCaptures = {
   id: string;
@@ -12,7 +8,6 @@ export type LeadCaptures = {
   email: string;
   phone: string;
   social: string;
-  action: ReactNode;
 };
 
 export const LeadCapturesColumns: ColumnDef<LeadCaptures>[] = [
@@ -42,18 +37,6 @@ export const LeadCapturesColumns: ColumnDef<LeadCaptures>[] = [
       >
         {row.getValue("social")}
       </a>
-    ),
-  },
-  {
-    accessorKey: "action",
-    header: "Actions",
-    cell: ({ row }) => (
-      <Button variant="outline">
-        <Link href="#">
-          {row.getValue("action")}
-          <span className="sr-only">Edit User</span>
-        </Link>
-      </Button>
     ),
   },
 ];
