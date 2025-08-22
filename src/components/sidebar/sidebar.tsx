@@ -1,13 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  BookUser,
-  LayoutDashboard,
-  Menu,
-  Newspaper,
-  Users,
-} from "lucide-react";
+import { BookUser, LayoutDashboard, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -50,7 +44,7 @@ export function Sidebar({ role, permissions }: SidebarProps) {
         )}
       >
         <div className="flex h-14 items-center border-b px-4">
-          <span className="text-lg font-semibold">Sambo Admin</span>
+          <span className="text-lg font-semibold">Alinsky Admin</span>
           <Button
             variant="ghost"
             size="icon"
@@ -76,11 +70,6 @@ export function Sidebar({ role, permissions }: SidebarProps) {
                 >
                   <item.icon className="h-5 w-5" />
                   <span>{item.name}</span>
-                  {item.badge && (
-                    <span className="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[0.625rem] font-medium text-primary-foreground">
-                      {item.badge}
-                    </span>
-                  )}
                 </Link>
               ))}
             </nav>
@@ -93,17 +82,10 @@ export function Sidebar({ role, permissions }: SidebarProps) {
 
 const navItems = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { name: "Users", href: "/users", icon: Users, badge: "8" },
   {
     name: "Lead Capture",
     href: "/lead-capture",
     icon: BookUser,
     permissions: "show-lead-capture",
-  },
-  {
-    name: "Blogs",
-    href: "/blogs",
-    icon: Newspaper,
-    permissions: "create-blog",
   },
 ];
